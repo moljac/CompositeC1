@@ -1,0 +1,80 @@
+@namespace ui url("http://www.w3.org/1999/xhtml");
+
+ui|explorersplitter,
+ui|explorertoolbarbutton {
+	border-bottom: 1px solid $(color:threedshadow);
+}
+ui|explorertoolbarbutton table.matrix {
+	width: 100%;
+	#region default
+		#alphabackdrop: url("${skin}/explorer/button.png");
+	#endregion
+	#region osx
+		#alphabackdrop: url("${skin}/explorer/button.png");
+	#endregion
+	#region vista
+		#alphabackdrop: url("${skin}/explorer/vista/button.png");
+	#endregion
+}
+
+ui|explorertoolbarbutton ui|labelbox {
+	padding-left: 1px;
+}
+ui|explorertoolbarbutton.hover {
+	background-color: $(color:threedhighlight);
+}
+ui|explorertoolbarbutton.active {
+	#region default
+		background-color: $(color:highlight);
+		border-bottom-color: $(color:highlight);
+	#endregion
+	#region osx
+		/*
+		background-color: $(color:highlight);
+		border-bottom-color: $(color:highlight);
+		*/
+		background-color: $(color:activecaption);
+		border-bottom-color: $(color:threedshadow);
+	#endregion
+	#region vista
+		border-bottom-color: #658fD5;
+	#endregion
+}
+ui|explorertoolbarbutton.active ui|labeltext {
+	#region osx
+		color: $(color:captiontext);
+	#endregion
+	#region default
+		color: $(color:highlighttext);
+	#endregion
+	#region vista
+		color: white;
+	#endregion
+}
+ui|explorerbar {
+	border-top: 1px solid $(color:threedhighlight);
+}
+ui|explorertoolbar ui|toolbargroup {
+	margin: 0;
+	padding: 0;
+}
+ui|explorermenu ui|toolbar {
+	border: none;
+}
+#region vista
+	ui|explorertoolbarbutton.active table.matrix td.c,
+	ui|explorertoolbarbutton.active table.matrix td.e,
+	ui|explorertoolbarbutton.active table.matrix td.w {
+		#alphabackdrop: url("${skin}/explorer/vista/button-active-c.png");
+	}
+	ui|explorertoolbarbutton.active table.matrix td.n,
+	ui|explorertoolbarbutton.active table.matrix td.ne,
+	ui|explorertoolbarbutton.active table.matrix td.nw {
+		#alphabackdrop: url("${skin}/explorer/vista/button-active-n.png");
+	}
+	ui|explorertoolbarbutton.active table.matrix td.s,
+	ui|explorertoolbarbutton.active table.matrix td.se,
+	ui|explorertoolbarbutton.active table.matrix td.sw {
+		#alphabackdrop: url("${skin}/explorer/vista/button-active-s.png");
+	}
+#endregion
